@@ -23,6 +23,7 @@ namespace TodoServerApp.Data.Services
             }
             await context.SaveChangesAsync();
         }
+
         public async Task<TaskItem> GetTaskAsync(int id)
         {
             return await context.TaskItems.FirstAsync(x => x.Id == id);
